@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { graphql } from 'react-apollo';
-import { getBooksQuery } from '../services/queries';
+import { graphql } from "react-apollo";
+import { getBooksQuery } from "../services/queries";
+
+// components
+import BookDetails from "./BookDetails";
 
 class BookList extends Component {
 	displayBooks() {
@@ -19,6 +22,7 @@ class BookList extends Component {
 		return (
 			<div>
 				<ul id='book-list'>{this.displayBooks()}</ul>
+				<BookDetails />
 			</div>
 		);
 	}
